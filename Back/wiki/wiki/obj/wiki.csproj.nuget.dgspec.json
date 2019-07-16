@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Back\\wiki\\wiki\\wiki.csproj": {}
+    "G:\\ВельвеТЕЧЬ\\Homework\\Back\\wiki\\wiki\\wiki.csproj": {}
   },
   "projects": {
-    "D:\\Back\\wiki\\wiki\\wiki.csproj": {
+    "G:\\ВельвеТЕЧЬ\\Homework\\Back\\wiki\\wiki\\wiki.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Back\\wiki\\wiki\\wiki.csproj",
+        "projectUniqueName": "G:\\ВельвеТЕЧЬ\\Homework\\Back\\wiki\\wiki\\wiki.csproj",
         "projectName": "wiki",
-        "projectPath": "D:\\Back\\wiki\\wiki\\wiki.csproj",
-        "packagesPath": "C:\\Users\\akazak\\.nuget\\packages\\",
-        "outputPath": "D:\\Back\\wiki\\wiki\\obj\\",
+        "projectPath": "G:\\ВельвеТЕЧЬ\\Homework\\Back\\wiki\\wiki\\wiki.csproj",
+        "packagesPath": "C:\\Users\\mirra\\.nuget\\packages\\",
+        "outputPath": "G:\\ВельвеТЕЧЬ\\Homework\\Back\\wiki\\wiki\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\akazak\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mirra\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,45 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.4.0, )"
+            },
+            "Microsoft.AspNet.WebApi.Core": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "System.Threading.Tasks": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
           "imports": [
             "net461"
           ],

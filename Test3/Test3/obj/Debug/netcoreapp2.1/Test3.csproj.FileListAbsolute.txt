@@ -12,3 +12,17 @@ D:\TestC#\Test3\Test3\obj\Debug\netcoreapp2.1\Test3.AssemblyInfo.cs
 D:\TestC#\Test3\Test3\obj\Debug\netcoreapp2.1\Test3.RazorTargetAssemblyInfo.cache
 D:\TestC#\Test3\Test3\obj\Debug\netcoreapp2.1\Test3.dll
 D:\TestC#\Test3\Test3\obj\Debug\netcoreapp2.1\Test3.pdb
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\bin\Debug\netcoreapp2.1\Test3.deps.json
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\bin\Debug\netcoreapp2.1\Test3.runtimeconfig.json
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\bin\Debug\netcoreapp2.1\Test3.runtimeconfig.dev.json
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\bin\Debug\netcoreapp2.1\Test3.dll
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\bin\Debug\netcoreapp2.1\Test3.pdb
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\obj\Debug\netcoreapp2.1\Test3.csprojAssemblyReference.cache
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\obj\Debug\netcoreapp2.1\Test3.csproj.CoreCompileInputs.cache
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\obj\Debug\netcoreapp2.1\Test3.RazorAssemblyInfo.cache
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\obj\Debug\netcoreapp2.1\Test3.RazorAssemblyInfo.cs
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\obj\Debug\netcoreapp2.1\Test3.AssemblyInfoInputs.cache
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\obj\Debug\netcoreapp2.1\Test3.AssemblyInfo.cs
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\obj\Debug\netcoreapp2.1\Test3.RazorTargetAssemblyInfo.cache
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\obj\Debug\netcoreapp2.1\Test3.dll
+G:\ВельвеТЕЧЬ\Homework\Test3\Test3\obj\Debug\netcoreapp2.1\Test3.pdb

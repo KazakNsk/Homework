@@ -1,7 +1,6 @@
 ﻿using FluentValidation;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Test3.Models;
 
@@ -40,13 +39,19 @@ namespace Test3.Services
             return await db.Delete(id);
         }
 
-        public async Task<IEnumerable<Page>> GetPages(string search)
+        public async Task<GetResponse> GetAll()
         {
-            if (string.IsNullOrEmpty(search))
+            IEnumerable<Page> pages = await db.GetAll();
+            return new GetResponse(pages);
+        }
+        public async Task<GetResponse> Get(string srsearch, int offset, int len)
+        {
+            if (string.IsNullOrEmpty(srsearch))
             {
                 throw new ArgumentException("'srsearch' argument is null or empty");
             }
-            return await db.GetPages(search);
+            IEnumerable<Page> pages = await db.GetPages(srsearch);
+            return new GetResponse(pages, offset, len);
         }
     }
 }

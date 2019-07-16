@@ -26,3 +26,17 @@ C:\Users\dnosenko\Documents\Summer School\Back\wiki\wiki\obj\Debug\netcoreapp2.2
 C:\Users\dnosenko\Documents\Summer School\Back\wiki\wiki\obj\Debug\netcoreapp2.2\wiki.RazorTargetAssemblyInfo.cache
 C:\Users\dnosenko\Documents\Summer School\Back\wiki\wiki\obj\Debug\netcoreapp2.2\wiki.dll
 C:\Users\dnosenko\Documents\Summer School\Back\wiki\wiki\obj\Debug\netcoreapp2.2\wiki.pdb
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\bin\Debug\netcoreapp2.2\wiki.deps.json
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\bin\Debug\netcoreapp2.2\wiki.runtimeconfig.json
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\bin\Debug\netcoreapp2.2\wiki.runtimeconfig.dev.json
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\bin\Debug\netcoreapp2.2\wiki.dll
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\bin\Debug\netcoreapp2.2\wiki.pdb
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\obj\Debug\netcoreapp2.2\wiki.csprojAssemblyReference.cache
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\obj\Debug\netcoreapp2.2\wiki.csproj.CoreCompileInputs.cache
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\obj\Debug\netcoreapp2.2\wiki.RazorAssemblyInfo.cache
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\obj\Debug\netcoreapp2.2\wiki.RazorAssemblyInfo.cs
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\obj\Debug\netcoreapp2.2\wiki.AssemblyInfoInputs.cache
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\obj\Debug\netcoreapp2.2\wiki.AssemblyInfo.cs
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\obj\Debug\netcoreapp2.2\wiki.RazorTargetAssemblyInfo.cache
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\obj\Debug\netcoreapp2.2\wiki.dll
+G:\ВельвеТЕЧЬ\Homework\Back\wiki\wiki\obj\Debug\netcoreapp2.2\wiki.pdb

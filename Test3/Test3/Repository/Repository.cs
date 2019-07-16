@@ -45,6 +45,11 @@ namespace Test3
             return await _ctx.Pages.Where(p => p.title.ToLower().Contains(search.ToLower())).ToListAsync();
         }
 
+        public async Task<IEnumerable<Page>> GetAll()
+        {
+            return await _ctx.Pages.ToListAsync();
+        }
+
         public async Task<string> Update(Page item)
         {
             if (item == null)

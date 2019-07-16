@@ -1,14 +1,10 @@
 ﻿using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Test3.Models
 {
     public class PageValidator : AbstractValidator<Page>
         {
-            private const int maxTitleLength = 5;
+            private const int maxTitleLength = 128;
             public PageValidator()
             {
                 RuleFor(p => p.title).NotEmpty();

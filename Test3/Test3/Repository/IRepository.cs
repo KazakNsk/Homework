@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Test3
@@ -11,5 +9,6 @@ namespace Test3
         Task<string> Create(T item);
         Task<string> Update(T item);
         Task<string> Delete(int id);
+        Task<IEnumerable<T>> GetAll();
     }
 }

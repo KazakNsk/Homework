@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using FluentValidation;
+﻿using FluentValidation;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Threading.Tasks;
 using Test3.Models;
 using Test3.Services;
 
@@ -23,6 +21,8 @@ namespace Test3.Controllers
             service = new PageService(db);
             pageValidator = new PageValidator();
         }
+       
+
         [EnableCors("Policy")]
         [HttpPost]
         [ProducesResponseType(StatusCodes.Status201Created)]
@@ -38,7 +38,7 @@ namespace Test3.Controllers
             {
                 return BadRequest(e.Message);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return StatusCode(500);
             }
@@ -58,11 +58,12 @@ namespace Test3.Controllers
             {
                 return BadRequest(e.Message);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return StatusCode(500);
             }
         }
+
         [EnableCors("Policy")]
         [HttpDelete("{value}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -81,24 +82,12 @@ namespace Test3.Controllers
             {
                 return BadRequest(e.Message);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return StatusCode(500);
             }
         }     
-        [EnableCors("Policy")]
-        [HttpGet("{srsearch,offset,len}")]
-        public async Task<ActionResult> GetPages(string search, int offset, int len)
-        {
-            try
-            {
-                return Ok(await service.GetPages(search));
-            }
-            catch (Exception e)
-            {
-                return StatusCode(500);
-            }
-        }
+        
     }
 }
    
