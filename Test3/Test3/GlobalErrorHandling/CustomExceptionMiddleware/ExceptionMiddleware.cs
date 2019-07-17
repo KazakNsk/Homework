@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.Net;
 using System.Threading.Tasks;
+using Test3.GlobalErrorHandling.Extensions;
 using Test3.GlobalErrorHandling.Models;
 
 namespace Test3.GlobalErrorHandling.CustomExceptionMiddleware
@@ -36,11 +38,17 @@ namespace Test3.GlobalErrorHandling.CustomExceptionMiddleware
 
             switch (exception)
             {
+                case var _ when exception is ValidationException:
+                    httpStatusCode = (int)HttpStatusCode.BadRequest;
+                    message = exception.Message;
+                    break;
                 default:
                     httpStatusCode = (int)HttpStatusCode.InternalServerError;
                     message = exception.Message;
                     break;
             }
+            context.Response.StatusCode = httpStatusCode;
+
 
             return context.Response.WriteAsync(new ErrorDetails()
             {

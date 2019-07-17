@@ -24,20 +24,10 @@ namespace Test3
 
         public async Task<string> Delete(int id)
         {
-            if (id < 0)
-            {
-                throw new Exception("Invalid id");
-            }
+
             Page page = await _ctx.Pages.FindAsync(id);
-            if (page != null)
-            {
-                _ctx.Pages.Remove(page);
-                await _ctx.SaveChangesAsync();
-            }
-            else
-            {
-                throw new Exception("No such Page with id [" + id + "]");
-            }
+            _ctx.Pages.Remove(page);
+            await _ctx.SaveChangesAsync();
             return "Page deleted successfully";
         }
 
@@ -53,15 +43,7 @@ namespace Test3
 
         public async Task<string> Update(Page item)
         {
-            if (item == null)
-            {
-                throw new ArgumentNullException("Null argument");
-            }
-            if (item.id < 0)
-            {
-                throw new ArgumentException("Invalid id");
-            }
-            Page page = await _ctx.Pages.FindAsync(item);
+            Page page = await _ctx.Pages.FindAsync(item.id);
             page.title = item.title;
             page.snippet = item.snippet;
             page.timestamp = item.timestamp;

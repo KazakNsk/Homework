@@ -15,8 +15,7 @@ namespace Test3.Controllers
         public PageController(PageContext ctx)
         {
             IRepository<Page> db = new Repository(ctx);
-            service = new PageService(db);
-        
+            service = new PageService(db);       
         }
 
         [EnableCors("Policy")]
