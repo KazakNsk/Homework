@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "G:\\ВельвеТЕЧЬ\\Homework\\Test3\\Test3\\Test3.csproj": {}
+    "D:\\TestProject\\Test3\\Test3\\Test3.csproj": {}
   },
   "projects": {
-    "G:\\ВельвеТЕЧЬ\\Homework\\Test3\\Test3\\Test3.csproj": {
+    "D:\\TestProject\\Test3\\Test3\\Test3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\ВельвеТЕЧЬ\\Homework\\Test3\\Test3\\Test3.csproj",
+        "projectUniqueName": "D:\\TestProject\\Test3\\Test3\\Test3.csproj",
         "projectName": "Test3",
-        "projectPath": "G:\\ВельвеТЕЧЬ\\Homework\\Test3\\Test3\\Test3.csproj",
-        "packagesPath": "C:\\Users\\mirra\\.nuget\\packages\\",
-        "outputPath": "G:\\ВельвеТЕЧЬ\\Homework\\Test3\\Test3\\obj\\",
+        "projectPath": "D:\\TestProject\\Test3\\Test3\\Test3.csproj",
+        "packagesPath": "C:\\Users\\akazak\\.nuget\\packages\\",
+        "outputPath": "D:\\TestProject\\Test3\\Test3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\mirra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\akazak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -60,12 +60,7 @@
               "target": "Package",
               "version": "[2.1.2, )"
             },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[2.2.6, )"
-            },
             "Microsoft.NETCore.App": {
-              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true

@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Test3.GlobalErrorHandling.CustomExceptionMiddleware;
+using Test3.GlobalErrorHandling.Extensions;
 using Test3.Models;
 
 namespace Test3
@@ -22,7 +24,10 @@ namespace Test3
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<PageContext>(options => options.UseSqlServer(connection));
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc((options =>
+            {
+                options.Filters.Add(typeof(ValidatorActionFilter));
+            })).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -35,6 +40,8 @@ namespace Test3
             {
                 app.UseHsts();
             }
+
+            app.ConfigureCustomExceptionMiddleware();
 
             app.UseHttpsRedirection();
             app.UseMvc();

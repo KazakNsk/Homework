@@ -1,8 +1,6 @@
-﻿using FluentValidation;
-using Microsoft.AspNetCore.Cors;
+﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Threading.Tasks;
 using Test3.Models;
 using Test3.Services;
@@ -13,15 +11,30 @@ namespace Test3.Controllers
     [ApiController]
     public class PageController : ControllerBase
     {
-        private IPageService<Page> service;
-        private PageValidator pageValidator;
+        private IPageService<Page> service;    
         public PageController(PageContext ctx)
         {
             IRepository<Page> db = new Repository(ctx);
             service = new PageService(db);
-            pageValidator = new PageValidator();
+        
         }
-       
+
+        [EnableCors("Policy")]
+        [HttpGet]
+        public async Task<ActionResult> GetAll()
+        {
+             return Ok(await service.GetAll());
+        }
+
+
+        [EnableCors("Policy")]
+        [HttpGet("{srsearch,offset,len}")]
+        public async Task<ActionResult> Get(string srsearch, int offset, int len)
+        {
+
+            return Ok(await service.Get(srsearch, offset, len));
+        }
+
 
         [EnableCors("Policy")]
         [HttpPost]
@@ -29,19 +42,9 @@ namespace Test3.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> Post(Page page)
         {
-            try
-            {
-                pageValidator.ValidateAndThrow(page);
-                return Ok(await service.Create(page));
-            }
-            catch (ValidationException e)
-            {
-                return BadRequest(e.Message);
-            }
-            catch (Exception)
-            {
-                return StatusCode(500);
-            }
+
+            return Ok(await service.Create(page));
+
         }
         [EnableCors("Policy")]
         [HttpPut]
@@ -49,20 +52,9 @@ namespace Test3.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> Put(Page page)
         {
-            try
-            {
-                pageValidator.ValidateAndThrow(page);
                 return Ok(await service.Update(page));
-            }
-            catch (ValidationException e)
-            {
-                return BadRequest(e.Message);
-            }
-            catch (Exception)
-            {
-                return StatusCode(500);
-            }
         }
+
 
         [EnableCors("Policy")]
         [HttpDelete("{value}")]
@@ -70,24 +62,10 @@ namespace Test3.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> Delete(int value)
         {
-            try
-            {
-                if (value < 0)
-                {
-                    throw new ValidationException("Invalid id");
-                }
-                return Ok(await service.Delete(value));
-            }
-            catch (ValidationException e)
-            {
-                return BadRequest(e.Message);
-            }
-            catch (Exception)
-            {
-                return StatusCode(500);
-            }
-        }     
+               return Ok(await service.Delete(value));
+        }
+   }     
         
-    }
 }
+
    

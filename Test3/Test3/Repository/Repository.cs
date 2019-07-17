@@ -18,6 +18,7 @@ namespace Test3
         public async Task<string> Create(Page page)
         { 
             await _ctx.Pages.AddAsync(page);
+            await _ctx.SaveChangesAsync();
             return "Page create successfully";
         }
 
